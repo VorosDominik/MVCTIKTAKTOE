@@ -24,7 +24,16 @@ class Modell {
     }
     getvegevane(){
         this.#viszintesgyozelem();
-        if (this.#lepesszam===9){
+        if(vell.indexOf("OOO")>-1){
+            console.log("O nyert")
+            return true;
+        }   
+        else if(vell.indexOf("XXX")>-1){
+            console.log("X nyert")
+            return true;
+        }
+            else if (this.#lepesszam===9){
+                console.log("Döntetlen")
             return true;
         }
         return false;
@@ -46,7 +55,11 @@ class Modell {
            
             
         }
+        vell +="@"
+        
         console.log(vell)
+        console.log(vell.indexOf("OOO"),vell.indexOf("XXX"))
+        return vell
     }
 }
 
