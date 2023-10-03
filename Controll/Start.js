@@ -15,8 +15,13 @@ class Start {
 
         // Az eseménykezelőt kívül, a konstruktoron kívül definiáljuk
         $(window).on("kivalaszt", (event) => {
-            this.MoDELL.setallapot();
-            this.Divelem.SetErtek(this.MoDELL.getErtek());
+            this.MoDELL.setallapot(event.detail.getindex());
+            event.detail.SetErtek(this.MoDELL.getErtek());
+
+            let jatekvege=this.MoDELL.getvegevane()
+            if (jatekvege) {
+                console.log("vege a dalnak")
+            }
         });
     }
 }

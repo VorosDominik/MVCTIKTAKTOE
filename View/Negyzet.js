@@ -4,16 +4,20 @@ export class Negyzet{
         
         this.szuloelem=szuloelem;
         this.#index=index
+        this.katintahto=true
         this.#htmlOszerak()
         this.elem = $(".elem:last-child")
         this.Pelem= this.elem.children("p")
         this.elem.on("click",()=>{
-            console.log("valami")
+            if (this.katintahto){
             this.#sajatesemenykezelo("kivalaszt")
+            this.katintahto=false;
+            }
         })
       
         
     }
+ 
    
     #sajatesemenykezelo(esemenynev){
         const esemenyem= new CustomEvent(esemenynev,{detail:this})
@@ -21,6 +25,9 @@ export class Negyzet{
     }
     SetErtek(jel){
         this.Pelem.html(jel)
+    }
+    getindex(){
+        return this.#index
     }
     #htmlOszerak(){
         let txt=""
