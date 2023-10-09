@@ -1,5 +1,6 @@
 export class Negyzet{
     #index
+    katintahto;
     constructor(szuloelem,index){
         
         this.szuloelem=szuloelem;
@@ -29,6 +30,9 @@ export class Negyzet{
     getindex(){
         return this.#index
     }
+    setKatinthatoF(){
+        this.katintahto=false
+    }
     #htmlOszerak(){
         let txt=""
         txt+=`<div class="elem">
@@ -39,4 +43,5 @@ export class Negyzet{
      txt+=""
         this.szuloelem.append(txt);
     }
+    
 }
