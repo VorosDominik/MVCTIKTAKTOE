@@ -1,4 +1,4 @@
-import { Start } from "./Controll/start.js"
+import { Start } from "../Controll/Start.js"
 $(function(){
 
 new Start() ;
