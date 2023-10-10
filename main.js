@@ -1,7 +1,6 @@
-import Start from "./Controll/start.js";
+import { Start } from "./Controll/start.js"
 $(function(){
 
-new Start();
-
+new Start() ;
 
 })

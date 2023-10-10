@@ -2,7 +2,7 @@ import Modell from "../Modell/Modell.js";
 import { Negyzet } from "../View/Negyzet.js";
 import { INFO_PANEL } from "../View/INFO-PANEL.js";
 
-class Start {
+export class Start {
     
     #elemLista=[]
     constructor() {
@@ -45,6 +45,5 @@ class Start {
         this.INFO.Allapotszovcsere(this.jatekvege)
     }
     
-}
+};
 
-export default Start;
